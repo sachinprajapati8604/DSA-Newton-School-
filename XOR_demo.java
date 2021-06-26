@@ -16,7 +16,6 @@ public class XOR_demo {
         int xor=arr[0];
         for(int i=1;i<n;i++){
             xor=xor^arr[i];
-
         }
         System.out.println("element which appears once is : "+xor);
     }

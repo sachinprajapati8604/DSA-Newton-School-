@@ -6,25 +6,23 @@ public class Test_demo {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        ArrayList <Integer> al=new ArrayList<>();
-
-        String str="1234";
-        String rev="";
-        for(int i=str.length()-1;i>=0;i--){
-            rev+=str.charAt(i);
-        }
-        System.out.println(rev);
-        int num=Integer.parseInt(rev);
-        while(num>0){
-            int rem=num%10;
-            al.add(rem);
-            num=num/10;
+        int n=sc.nextInt();
+        int targetSum=sc.nextInt(); //9
+        int arr[]=new int[n];  // 2 ,4,3,5,5
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
         }
 
-
-        System.out.println(al);
-
-
+        int sum=0;
+        for(int i=0;i<n;i++){   //i=0
+            sum=arr[i];
+            for(int j=i+1;j<n;j++){ //j=2
+                sum=arr[i]+arr[j];   //9,
+                if(sum==targetSum){
+                    System.out.println("["+i+" , "+j+"]");
+                }
+            }
+        }
 
     }
 
