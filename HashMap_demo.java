@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class HashMap_demo {
     public static void main(String[] args) {
@@ -31,6 +32,16 @@ public class HashMap_demo {
             System.out.println("Hashmap is empty");
         }else{
             System.out.println("Hasmap have a size of : "+hm.size());
+        }
+        //this is most important
+        // access the key from its value we have to use map.entry
+
+        String value="Unnao";
+        for(Map.Entry<Integer,String> entry: hm.entrySet()) {
+            if(entry.getValue().equals(value)) {
+                System.out.println("The key for value " + value + " is " + entry.getKey());
+                break;
+            }
         }
 
     }
