@@ -2,30 +2,33 @@ package com.company;
 
 public class LinkedList_creation {
     public static void main(String[] args) {
-    MyLinkedList list=new MyLinkedList();
-    list.print();
-    list.add(1);
-    list.add(2);
-    list.add(3);
-    list.add(4);
-    list.add(5);
-    list.print();
+        MyLinkedList list = new MyLinkedList();
+        list.print();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.print();
     }
 }
-class  MyLinkedList{
+
+class MyLinkedList {
     private Node start;
-    public  Node getlistStart(){
+
+    public Node getlistStart() {
         return start;
     }
-    public  void  add(Integer data){
-        Node node=new Node(data);
-        if(start==null){
-            this.start=node;
+
+    public void add(Integer data) {
+        Node node = new Node(data);
+        if (start == null) {
+            this.start = node;
             return;
         }
-        Node temp=start;
-        while(temp.getNextNode()!=null){
-            temp=temp.getNextNode();
+        Node temp = start;
+        while (temp.getNextNode() != null) {
+            temp = temp.getNextNode();
 
         }
         temp.setNextNode(node);
@@ -38,25 +41,28 @@ class  MyLinkedList{
             temp = temp.getNextNode();
         }
         System.out.println();
-        }
-
     }
 
-class Node{
+}
+
+class Node {
     private Integer data;
     private Node nextNode;
 
-    public Node(Integer data){
-        this.data=data;
+    public Node(Integer data) {
+        this.data = data;
     }
-    public Integer getData(){
+
+    public Integer getData() {
         return data;
     }
-    public Node  getNextNode(){
+
+    public Node getNextNode() {
         return nextNode;
     }
-    public void setNextNode(Node nextNode){
-        this.nextNode=nextNode;
+
+    public void setNextNode(Node nextNode) {
+        this.nextNode = nextNode;
     }
 
 }

@@ -6,7 +6,7 @@ public class compartor {
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            students.add(new Student("abc", 10-i));
+            students.add(new Student("abc", 10 - i));
         }
         Collections.sort(students,
                 (student1, student2) -> Integer.compare(student1.getMarks(), student2.getMarks()));

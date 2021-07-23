@@ -6,21 +6,21 @@ import java.util.Scanner;
 
 public class Array_product {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        int arr[]=new int[n];
-        for (int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
         }
-        int mul=1;
-        for(int i=0;i<n;i++){
-            mul=1;
-            for(int j=0;j<n;j++){
-                if(i!=j){
-                    mul=mul*arr[j];
+        int mul = 1;
+        for (int i = 0; i < n; i++) {
+            mul = 1;
+            for (int j = 0; j < n; j++) {
+                if (i != j) {
+                    mul = mul * arr[j];
                 }
             }
-            System.out.print(mul+" ");
+            System.out.print(mul + " ");
         }
     }
 }
